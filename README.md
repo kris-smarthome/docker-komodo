@@ -14,3 +14,4 @@ docker compose up -d
 
 > [!NOTE]
 > This stack incldes traefik, create the traefik network before deploying this stack: `docker network create -d bridge traefik`
+> KOMODO_HOST must be set properly when uing traefik.

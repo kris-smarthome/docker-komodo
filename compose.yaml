@@ -29,7 +29,7 @@ services:
     labels:
       - komodo.skip # Prevent Komodo from stopping with StopAllContainers
       - traefik.enable=true
-      - traefik.http.routers.komodo.rule=Host(`komodo.evillabs.io`)
+      - traefik.http.routers.komodo.rule=Host(`${KOMODO_HOST}`)
       - traefik.http.routers.komodo.entrypoints=websecure
       - traefik.http.routers.komodo.tls.certresolver=letsencrypt
       - traefik.http.services.komodo.loadbalancer.server.port=9120
